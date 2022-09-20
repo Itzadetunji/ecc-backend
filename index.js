@@ -26,48 +26,49 @@ app.post('/waitlist', async (req,res) => {
   db.collection('waitlist')
     .insertOne(email)
     .then((result) => {
-      res.status(201).json(result)
+      sendMail(req,res)
     })
-    .catch(err => res.status(500).json({error: "Could not create a new document"}))
-    if (!email) {
-      return res.status(400).json({ error: "All fields are required" });
-    }
-  
-  // Create transporter
+    .catch(err =>  {return res.status(500).json({error: "Could not create a new document"})})
+})
+
+async function sendMail(req,res) {
+  if (!req.body.email) {
+    return res.status(400).json({ error: "All fields are required" });
+  }
+  //Create transporter
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "adetunjiadeyinka29@gmail.com",
-      pass: "tvgcjaqkdchssgin",
+      user: "konfampay@gmail.com",
+      pass: "btqipojwgkmohsna",
     },
   });
 
   // Create mail options
   const mailOptions = {
-    from: "adetunjiadeyinka29@gmail.com",
-    to: email,
-    replyTo: "adetunjiadeyinka29@gmail.com",
-    subject: ` — Contact Form: adetunjiadeyinka.com`,
-    text: email,
+    from: "konfampay@gmail.com",
+    to: req.body.email,
+    replyTo: "konfampay@gmail.com",
+    subject: `Konfampay waitlist`,
+    text: req.body.email,
     html: `
       <h1>Hello there</h1>
       <h2>Email:</h2>
-      <p>${email}</p>
+      <p>${req.body.email}</p>
     `,
   };
   try {
-    addTo();
     // Send email
     await transporter.sendMail(mailOptions, (err, info) => {
       if (err) {
         return res.status(500).json({ error: err.message });
       }
-      return res.status(200).json({ message: "Email sent" });
+      return res.status(201).json({ message: "Email sent" });
     });
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
-})
+}
 
 app.get("/waitlist", (req,res) => {
   let waitlist = []
