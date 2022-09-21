@@ -54,8 +54,8 @@ async function sendMail(req,res) {
     from: "konfampay@gmail.com",
     to: req.body.email,
     replyTo: "konfampay@gmail.com",
-    subject: `Konfampay waitlist`,
-    text: req.body.email,
+    subject: `ECC waitlist 🎉`,
+    text: "ECC Waitlist",
     html: `
     <div style="margin: 10px auto; text-align: center;">
       <img src="https://github.com/KonfamPay/ecc-waitlist-backend/blob/master/assets/ecc-logo.svg">
