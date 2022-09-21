@@ -58,9 +58,9 @@ async function sendMail(req,res) {
     text: req.body.email,
     html: `
     <div style="margin: 10px auto; text-align: center;">
-      <img src="https://eccwaitlistbackend.herokuapp.com/assets/ecc-logo.svg">
+      <img src="https://github.com/KonfamPay/ecc-waitlist-backend/blob/master/assets/ecc-logo.svg">
       <br>
-      <img src="https://eccwaitlistbackend.herokuapp.com/assets/thank-you.svg" style="margin-top: 28px;"/>
+      <img src="https://github.com/KonfamPay/ecc-waitlist-backend/blob/master/assets/thank-you.svg" style="margin-top: 28px;"/>
       <div style="text-align: left;">
         <p style="font-size: 12px; ">Hi there,</p>
         <p style="font-size: 12px; ">Thank you! You&apos;ve been added to the 
