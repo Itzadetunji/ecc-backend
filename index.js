@@ -58,12 +58,12 @@ async function sendMail(req,res) {
     text: req.body.email,
     html: `
     <div style="margin: 10px auto; text-align: center;">
-      <img src="assets/ecc-logo.svg">
+      <img src="https://eccwaitlistbackend.herokuapp.com/assets/ecc-logo.svg">
       <br>
-      <img src="assets/thank-you.svg" style="margin-top: 28px;"/>
+      <img src="https://eccwaitlistbackend.herokuapp.com/assets/thank-you.svg" style="margin-top: 28px;"/>
       <div style="text-align: left;">
         <p style="font-size: 12px; ">Hi there,</p>
-        <p style="font-size: 12px; ">Thank you!. You’ve been added to the 
+        <p style="font-size: 12px; ">Thank you! You&apos;ve been added to the 
           e-commerce complaint waitlist.</p>
         <p style="font-size: 12px; ">We are on a mission to make shopping experi
           ence better for consumers by empowering 
