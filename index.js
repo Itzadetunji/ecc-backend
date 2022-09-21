@@ -6,17 +6,22 @@ const nodemailer = require("nodemailer");
 
 const app = express()
 app.use(express.json())
+let port = process.env.PORT || 3001;
 
 //db connection
 let db
 connectToDb((err) => {
   if (!err) {
-    app.listen(3001, () => {
+    app.listen(port, () => {
       console.log("App listening on port 3001")
     })
     db = getDb()
   }
 })
+
+// app.listen(port, () => {
+//   console.log("App listening on port 3001")
+// })
 
 app.use(cors());
 
