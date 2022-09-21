@@ -69,11 +69,11 @@ async function sendMail(req,res) {
           ence better for consumers by empowering 
           them with the tools and resources to avoid 
           common scams and make money online pur
-          chase as smooth as possible. we are solely 
+          chase as smooth as possible. We are solely 
           driven by the lines of thought that business is 
           not just a transaction but a relationship that 
           allows both parties to benefit.
-          
+          <br>
           Tell your friends about e-commerce complaint
           by sharing our link.</p>
         <p>Yours Sincerely <br><span style="color: #0B63C5;">TEAM ECC</span></p>
