@@ -57,9 +57,33 @@ async function sendMail(req,res) {
     subject: `Konfampay waitlist`,
     text: req.body.email,
     html: `
-      <h1>Hello there</h1>
-      <h2>Email:</h2>
-      <p>${req.body.email}</p>
+    <div style="margin: 10px auto; text-align: center;">
+      <img src="assets/ecc-logo.svg">
+      <br>
+      <img src="assets/thank-you.svg" style="margin-top: 28px;"/>
+      <div style="text-align: left;">
+        <p style="font-size: 12px; ">Hi there,</p>
+        <p style="font-size: 12px; ">Thank you!. You’ve been added to the 
+          e-commerce complaint waitlist.</p>
+        <p style="font-size: 12px; ">We are on a mission to make shopping experi
+          ence better for consumers by empowering 
+          them with the tools and resources to avoid 
+          common scams and make money online pur
+          chase as smooth as possible. we are solely 
+          driven by the lines of thought that business is 
+          not just a transaction but a relationship that 
+          allows both parties to benefit.
+          
+          Tell your friends about e-commerce complaint
+          by sharing our link.</p>
+        <p>Yours Sincerely <br><span style="color: #0B63C5;">TEAM ECC</span></p>
+      </div>
+      <div style="margin: 20px auto;">
+        <a href="https://main.d2cdxlo4ga9bsf.amplifyapp.com/" style="cursor: pointer;" target="_blank">
+          <button style="width: 118px; height: 40px; border: none; background-color: #0B63C5; border-radius: 10px; color: white; cursor: pointer;">Share Link</button>
+        </a>
+      </div>
+    </div>
     `,
   };
   try {
