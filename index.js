@@ -58,7 +58,6 @@ async function sendMail(req,res) {
     text: "ECC Waitlist",
     html: `
     <div style="margin: 10px auto; text-align: center;">
-      <img src="https://raw.githubusercontent.com/KonfamPay/ecc-waitlist-backend/master/assets/ecc-logo.svg"/>
       <div style="text-align: left;">
         <p style="font-size: 12px; ">Hi there,</p>
         <p style="font-size: 12px; ">Thank you! You&apos;ve been added to the 
