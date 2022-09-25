@@ -29,7 +29,7 @@ app.post('/waitlist', async (req,res) => {
   const email = req.body
 
   db.collection('waitlist')
-    .insertOne({email: email, time: new Date()})
+    .insertOne({email, time: new Date()})
     .then((result) => {
       sendMail(req,res)
     })
