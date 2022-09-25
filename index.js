@@ -26,10 +26,10 @@ connectToDb((err) => {
 app.use(cors());
 
 app.post('/waitlist', async (req,res) => {
-  const email = req.body
-
+  const email = req.body;
+  const time = new Date();
   db.collection('waitlist')
-    .insertOne({email, time: new Date()})
+    .insertOne(email, time);
     .then((result) => {
       sendMail(req,res)
     })
