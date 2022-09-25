@@ -26,7 +26,7 @@ connectToDb((err) => {
 app.use(cors());
 
 app.post('/waitlist', async (req,res) => {
-  const email = req.body;
+  const email = req.body.email;
   const time = new Date();
   db.collection('waitlist')
     .insertOne({email, time})
