@@ -28,17 +28,12 @@ app.use(cors());
 app.post('/waitlist', async (req,res) => {
   const email = req.body.email;
   const time = new Date();
-  if (db.waitlist.find( { email} ).count() > 1){
-    db.collection('waitlist')
-      .insertOne({email, time})
-      .then((result) => {
-        sendMail(req,res)
-      })
-      .catch(err =>  {return res.status(500).json({error: "Could not create a new document"})})
-  }
-  else{
-    return res.status(303);
-  }
+  db.collection('waitlist')
+    .insertOne({email, time})
+    .then((result) => {
+      sendMail(req,res)
+    })
+    .catch(err =>  {return res.status(500).json({error: "Could not create a new document"})})
 })
 
 async function sendMail(req,res) {
