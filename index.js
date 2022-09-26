@@ -28,11 +28,6 @@ app.use(cors());
 app.post('/waitlist', async (req,res) => {
   const email = req.body.email;
   const time = new Date();
-  // if (!db.waitlist.findOne({ email })){
-  // }
-  // else {
-  //   return res.status(205);
-  // }
   db.collection('waitlist')
     .insertOne({email, time})
     .then((result) => {
