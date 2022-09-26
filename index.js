@@ -56,13 +56,19 @@ async function sendMail(req,res) {
     replyTo: "konfampay@gmail.com",
     subject: `ECC waitlist 🎉`,
     text: "ECC Waitlist",
+    attachments: [{
+      filename: 'ecc-logo.svg',
+      path: '/assets/ecc-logo.svg',
+      cid: 'unique@kreata.ee'
+    }],
     html: `
-    <div style="margin: 10px auto; text-align: center;">
+    <div style="margin: 10px auto; text-align: center; background-color: #F1F7FE; padding: 10px; max-width: 640px; font-family: Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;">
       <div style="text-align: left;">
+        <img src="cid:unique@kreata.ee" style="margin-top: 28px;"/>
         <p style="font-size: 12px; ">Hi there,</p>
         <p style="font-size: 12px; ">Thank you! You&apos;ve been added to the 
           e-commerce complaint waitlist.</p>
-        <p style="font-size: 12px; ">We are on a mission to make shopping experi
+        <p style="font-size: 12px; line-height: 20px;">We are on a mission to make shopping experi
           ence better for consumers by empowering 
           them with the tools and resources to avoid 
           common scams and make money online pur
@@ -73,11 +79,12 @@ async function sendMail(req,res) {
           <br>
           Tell your friends about e-commerce complaint
           by sharing our link.</p>
-        <p>Yours Sincerely <br><span style="color: #0B63C5;">TEAM ECC</span></p>
+        <p style="margin-bottom: 0px;">Yours Sincerely</p>
+        <p style="color: #0B63C5; margin-top: 5px;">TEAM ECC</p>
       </div>
       <div style="margin: 20px auto;">
         <a href="https://main.d2cdxlo4ga9bsf.amplifyapp.com/" style="cursor: pointer;" target="_blank">
-          <button style="width: 118px; height: 40px; border: none; background-color: #0B63C5; border-radius: 10px; color: white; cursor: pointer;">Share Link</button>
+          <button style="width: 118px; height: 40px; border: none; background-color: #0B63C5; border-radius: 4px; color: white; cursor: pointer;">Share Link</button>
         </a>
       </div>
     </div>
