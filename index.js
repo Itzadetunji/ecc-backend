@@ -62,17 +62,7 @@ async function sendMail(req,res) {
         <p style="font-size: 12px; ">Hi there,</p>
         <p style="font-size: 12px; ">Thank you! You&apos;ve been added to the 
           e-commerce complaint waitlist.</p>
-        <p style="font-size: 12px; line-height: 20px;">We are on a mission to make shopping experi
-          ence better for consumers by empowering 
-          them with the tools and resources to avoid 
-          common scams and make money online pur
-          chase as smooth as possible. We are solely 
-          driven by the lines of thought that business is 
-          not just a transaction but a relationship that 
-          allows both parties to benefit.
-          <br>
-          Tell your friends about e-commerce complaint
-          by sharing our link.</p>
+        <p style="font-size: 12px; line-height: 20px;">We are on a mission to make shopping experience better for consumers by empowering them with the tools and resources to avoid common scams and make money online purchase as smooth as possible. We are solely driven by the lines of thought that business is not just a transaction but a relationship that allows both parties to benefit.<br>Tell your friends about e-commerce complaint by sharing our link.</p>
         <p style="margin-bottom: 0px;">Yours Sincerely</p>
         <p style="color: #0B63C5; margin-top: 5px;">TEAM ECC</p>
       </div>
