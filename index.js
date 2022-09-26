@@ -58,7 +58,7 @@ async function sendMail(req,res) {
     text: "ECC Waitlist",
     attachments: [{
       filename: 'ecc-logo.svg',
-      path: 'assets/ecc-logo.svg',
+      path: 'ecc-logo.svg',
       cid: 'unique@kreata.ee'
     }],
     html: `
