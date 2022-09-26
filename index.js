@@ -59,7 +59,6 @@ async function sendMail(req,res) {
     html: `
     <div style="margin: 10px auto; text-align: center; background-color: #F1F7FE; padding: 10px; max-width: 640px; font-family: Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;">
       <div style="text-align: left;">
-        <img src="https://drive.google.com/file/d/1fGLUCeU_eJsZ76tRf1KC1-QxlYvKzB4N/" style="margin-top: 28px;"/>
         <p style="font-size: 12px; ">Hi there,</p>
         <p style="font-size: 12px; ">Thank you! You&apos;ve been added to the 
           e-commerce complaint waitlist.</p>
