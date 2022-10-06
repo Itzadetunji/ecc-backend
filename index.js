@@ -113,10 +113,9 @@ async function sendMail(req, res) {
 	}
 }
 
-app.get("/waitlist", async (req, res) => {
+app.get("/waitlist", (req, res) => {
 	const waitlist = [];
-	await db
-		.collection("waitlist")
+	db.collection("waitlist")
 		.find()
 		.sort({ email: 1 })
 		.forEach((email) => waitlist.push(email))
