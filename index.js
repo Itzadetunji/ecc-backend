@@ -66,7 +66,7 @@ async function sendMail(req, res) {
 	if (!req.body.email) {
 		return res.status(400).json({ error: "All fields are required" });
 	}
-	//Create transporter
+	//Create transporter for sending email
 	const transporter = nodemailer.createTransport({
 		service: "gmail",
 		auth: {
@@ -93,7 +93,7 @@ async function sendMail(req, res) {
         <p style="color: #0B63C5; margin-top: 5px;">TEAM ECC</p>
       </div>
       <div style="margin: 20px auto;">
-        <a href="https://main.d2cdxlo4ga9bsf.amplifyapp.com/" style="cursor: pointer;" target="_blank">
+        <a href="https://main.d2cdxlo4ga9bsf.amplifyapp.com/" style="cursor: pointer;" target="_blank" rel="noreferrer noopener">
           <button style="width: 118px; height: 40px; border: none; background-color: #0B63C5; border-radius: 4px; color: white; cursor: pointer;">Share Link</button>
         </a>
       </div>
@@ -101,7 +101,7 @@ async function sendMail(req, res) {
     `,
 	};
 	try {
-		// Send email
+		// Send email to downloader
 		await transporter.sendMail(mailOptions, (err, info) => {
 			if (err) {
 				return res.status(500).json({ error: err.message });
